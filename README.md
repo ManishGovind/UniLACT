@@ -51,7 +51,7 @@ UniLACT training consists of **three stages**:
 ```bash
 # (Update this command to your UniLARN entrypoint/config if different)
 cd ${PROJECT_UNILACT_ROOT}/unilarn
-python train_unilarn.py --config_path "${PROJECT_UNILACT_ROOT}/unilarn/configs/train/stage1_unilarn.yaml"
+python train_unilarn.py --config_path "${PROJECT_UNILACT_ROOT}/unilarn/configs/train/train_unilarn_on_calvin.yaml"
 ```
 
 ---
@@ -61,20 +61,17 @@ python train_unilarn.py --config_path "${PROJECT_UNILACT_ROOT}/unilarn/configs/t
 ```bash
 # (Update this command to your pretraining config if different)
 cd ${PROJECT_UNILACT_ROOT}/unilact/train
-python train_unilact.py --config_path "${PROJECT_UNILACT_ROOT}/unilact/configs/train/stage2_pretrain_unilact.yaml"
+python train_unilact.py --config_path "${PROJECT_UNILACT_ROOT}/unilact/configs/train/pretrain_unilact_on_calvin.yaml"
 ```
 
 ---
 
-### Stage 3 — Fine-tuning on CALVIN (Multi-GPU via 🤗 Accelerate)
+### Stage 3 — Fine-tuning on CALVIN
 
 ```bash
-export CUDA_VISIBLE_DEVICES=0,1,2,3
 cd ${PROJECT_UNILACT_ROOT}/unilact/train
 
-accelerate launch --main_process_port 29508 \
-  train_unilact.py \
-  --config_path "${PROJECT_UNILACT_ROOT}/unilact/configs/train/finetune_unilact_on_calvin.yaml"
+python train_unilact.py   --config_path "${PROJECT_UNILACT_ROOT}/unilact/configs/train/finetune_unilact_on_calvin.yaml"
 ```
 
 
