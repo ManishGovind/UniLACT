@@ -75,5 +75,6 @@ python train_unilact.py   --config_path "${PROJECT_UNILACT_ROOT}/unilact/configs
 ```
 
 
+## 🙏 Acknowledgements
 
-
+This project builds on top of [Moto](https://github.com/TencentARC/Moto), [CALVIN](https://github.com/mees/calvin). We thank the authors and maintainers for releasing their code and datasets to the community.
