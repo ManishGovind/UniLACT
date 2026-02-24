@@ -77,3 +77,13 @@ python train_unilact.py   --config_path "${PROJECT_UNILACT_ROOT}/unilact/configs
 
 
 
+
+## 🙏 Acknowledgements
+```
+This project builds on top of the following excellent open-source codebases and benchmarks:
+
+- **CALVIN**: [GitHub link](<CALVIN_GITHUB_LINK>)
+- **MOTO / MotoGPT**: [GitHub link](<MOTO_GITHUB_LINK>)
+
+We thank the authors and maintainers for releasing their code and datasets to the community.
+```

@@ -1,7 +1,7 @@
 export CUDA_VISIBLE_DEVICES=0
-export CALVIN_ROOT=${PROJECT_ROOT}/../calvin/
+export CALVIN_ROOT=${PROJECT_UNILACT_ROOT}/../calvin/
 export MESA_GL_VERSION_OVERRIDE=3.3
-export PROJECT_ROOT=/data/mgovind/UniLACT/
+export PROJECT_UNILACT_ROOT=/path/to/UniLACT/
 
 
 EvalCALVIN() {
