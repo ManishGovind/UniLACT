@@ -1,12 +1,19 @@
 <div align="center">
 
 <h2>
-  <a href="" style="color:#9C276A; text-decoration:none;">
+  <a href="https://manishgovind.github.io/unilact-vla/" style="color:#9C276A; text-decoration:none;">
     UniLACT: Depth-Aware RGB Latent Action Learning for Vision-Language-Action Models
   </a>
 </h2>
 
-
+<p>
+  <a href="https://arxiv.org/abs/2510.13808">
+    <img src="https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat&logo=arxiv" />
+  </a>
+  <a href="https://manishgovind.github.io/unilact-vla/">
+    <img src="https://img.shields.io/badge/Website-Project%20Page-2ea44f?style=flat" />
+  </a>
+</p>
 
 </div>
 
@@ -39,8 +46,8 @@ export PROJECT_UNILACT_ROOT=/path/to/UniLACT
 UniLACT training consists of **three stages**:
 
 1. **Stage 1:** Unified latent action learning (**UniLARN**)
-2. **Stage 2:** Unified latent pretraining (**UniLACT pretrain**)
-3. **Stage 3:** Action fine-tuning on downstream tasks (**CALVIN**)
+2. **Stage 2:** Unified latent pretraining 
+3. **Stage 3:** Action fine-tuning
 
 > Training is driven by YAML configs under `unilact/configs/train/` (and UniLARN configs under `unilarn/`).
 
@@ -56,7 +63,7 @@ python train_unilarn.py --config_path "${PROJECT_UNILACT_ROOT}/unilarn/configs/t
 
 ---
 
-### Stage 2 — UniLACT Pretraining (Cross-modal / Latent Pretrain)
+### Stage 2 — Unified latent Pretraining 
 
 ```bash
 # (Update this command to your pretraining config if different)
@@ -66,24 +73,21 @@ python train_unilact.py --config_path "${PROJECT_UNILACT_ROOT}/unilact/configs/t
 
 ---
 
-### Stage 3 — Fine-tuning on CALVIN
+### Stage 3 — Fine-tuning
 
 ```bash
 cd ${PROJECT_UNILACT_ROOT}/unilact/train
-
 python train_unilact.py   --config_path "${PROJECT_UNILACT_ROOT}/unilact/configs/train/finetune_unilact_on_calvin.yaml"
 ```
 
+
+## ⏳ To-Do
+- [ ] CALVIN benchmark evaluation 
+- [ ] Release pretrained and finetuned model checkpoints
 
 
 
 
 ## 🙏 Acknowledgements
-```
-This project builds on top of the following excellent open-source codebases and benchmarks:
 
-- **CALVIN**: [GitHub link](<CALVIN_GITHUB_LINK>)
-- **MOTO / MotoGPT**: [GitHub link](<MOTO_GITHUB_LINK>)
-
-We thank the authors and maintainers for releasing their code and datasets to the community.
-```
+This project builds on top of [Moto](https://github.com/TencentARC/Moto), [CALVIN](https://github.com/mees/calvin). We thank the authors and maintainers for releasing their code and datasets to the community.
