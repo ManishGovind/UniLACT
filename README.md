@@ -1,12 +1,19 @@
 <div align="center">
 
 <h2>
-  <a href="" style="color:#9C276A; text-decoration:none;">
-  UniLACT: Depth-Aware RGB Latent Action Learning for Vision-Language-Action Models
+  <a href="https://manishgovind.github.io/uniact-vla/" style="color:#9C276A; text-decoration:none;">
+    UniLACT: Depth-Aware RGB Latent Action Learning for Vision-Language-Action Models
   </a>
 </h2>
 
-
+<p>
+  <a href="https://arxiv.org/abs/2510.13808">
+    <img src="https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat&logo=arxiv" />
+  </a>
+  <a href="https://manishgovind.github.io/uniact-vla/">
+    <img src="https://img.shields.io/badge/Website-Project%20Page-2ea44f?style=flat" />
+  </a>
+</p>
 
 </div>
 
@@ -70,9 +77,15 @@ python train_unilact.py --config_path "${PROJECT_UNILACT_ROOT}/unilact/configs/t
 
 ```bash
 cd ${PROJECT_UNILACT_ROOT}/unilact/train
-
 python train_unilact.py   --config_path "${PROJECT_UNILACT_ROOT}/unilact/configs/train/finetune_unilact_on_calvin.yaml"
 ```
+
+
+## ⏳ To-Do
+- [ ] CALVIN benchmark evaluation 
+- [ ] Release pretrained and finetuned model checkpoints
+
+
 
 
 ## 🙏 Acknowledgements
