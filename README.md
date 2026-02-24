@@ -16,38 +16,6 @@
 ```bash
 conda create -n unilact python=3.10 -y
 conda activate unilact
-
-
-
-```bash
-git clone https://github.com/ManishGovind/UniLACT.git
-cd UniLACT
-pip install -r requirements.txt
-```
-
-
-
-````md
-<div align="center">
-
-<h2>
-  <a href="https://manishgovind.github.io/uniact-vla/" style="color:#9C276A; text-decoration:none;">
-    UniLACT: Depth-Aware RGB Latent Action Learning for Vision-Language-Action Models
-  </a>
-</h2>
-
-<p>🚧 Code will be updated soon. Stay tuned!</p>
-
-</div>
-
----
-
-## ⚙️ Setup
-
-### 1) Create and activate environment
-```bash
-conda create -n unilact python=3.10 -y
-conda activate unilact
 ````
 
 ### 2) Clone the repo and install dependencies
