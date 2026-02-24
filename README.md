@@ -63,7 +63,7 @@ python train_unilarn.py --config_path "${PROJECT_UNILACT_ROOT}/unilarn/configs/t
 
 ---
 
-### Stage 2 — UniLACT Pretraining (Cross-modal / Latent Pretrain)
+### Stage 2 — Unified latent Pretraining 
 
 ```bash
 # (Update this command to your pretraining config if different)
@@ -73,7 +73,7 @@ python train_unilact.py --config_path "${PROJECT_UNILACT_ROOT}/unilact/configs/t
 
 ---
 
-### Stage 3 — Fine-tuning on CALVIN
+### Stage 3 — Fine-tuning
 
 ```bash
 cd ${PROJECT_UNILACT_ROOT}/unilact/train
