@@ -17,6 +17,98 @@
 conda create -n unilact python=3.10 -y
 conda activate unilact
 
-cd /path/to/UniLACT
+
+
+```bash
+git clone https://github.com/ManishGovind/UniLACT.git
+cd UniLACT
 pip install -r requirements.txt
 ```
+
+
+
+````md
+<div align="center">
+
+<h2>
+  <a href="https://manishgovind.github.io/uniact-vla/" style="color:#9C276A; text-decoration:none;">
+    UniLACT: Depth-Aware RGB Latent Action Learning for Vision-Language-Action Models
+  </a>
+</h2>
+
+<p>🚧 Code will be updated soon. Stay tuned!</p>
+
+</div>
+
+---
+
+## ⚙️ Setup
+
+### 1) Create and activate environment
+```bash
+conda create -n unilact python=3.10 -y
+conda activate unilact
+````
+
+### 2) Clone the repo and install dependencies
+
+```bash
+git clone https://github.com/manishgovind/uniact-vla.git
+cd UniLACT
+pip install -r requirements.txt
+```
+
+### 3) (Optional) Set project root
+
+```bash
+export PROJECT_UNILACT_ROOT=/path/to/UniLACT
+```
+
+---
+
+## 🚀 Training (3 Stages)
+
+UniLACT training consists of **three stages**:
+
+1. **Stage 1:** Unified latent action learning (**UniLARN**)
+2. **Stage 2:** Unified latent pretraining (**UniLACT pretrain**)
+3. **Stage 3:** Action fine-tuning on downstream tasks (**CALVIN**)
+
+> Training is driven by YAML configs under `unilact/configs/train/` (and UniLARN configs under `unilarn/`).
+
+---
+
+### Stage 1 — UniLARN (Unified Latent Action Learning)
+
+```bash
+# (Update this command to your UniLARN entrypoint/config if different)
+cd ${PROJECT_UNILACT_ROOT}/unilarn
+python train_unilarn.py --config_path "${PROJECT_UNILACT_ROOT}/unilarn/configs/train/stage1_unilarn.yaml"
+```
+
+---
+
+### Stage 2 — UniLACT Pretraining (Cross-modal / Latent Pretrain)
+
+```bash
+# (Update this command to your pretraining config if different)
+cd ${PROJECT_UNILACT_ROOT}/unilact/train
+python train_unilact.py --config_path "${PROJECT_UNILACT_ROOT}/unilact/configs/train/stage2_pretrain_unilact.yaml"
+```
+
+---
+
+### Stage 3 — Fine-tuning on CALVIN (Multi-GPU via 🤗 Accelerate)
+
+```bash
+export CUDA_VISIBLE_DEVICES=0,1,2,3
+cd ${PROJECT_UNILACT_ROOT}/unilact/train
+
+accelerate launch --main_process_port 29508 \
+  train_unilact.py \
+  --config_path "${PROJECT_UNILACT_ROOT}/unilact/configs/train/finetune_unilact_on_calvin.yaml"
+```
+
+
+
+
