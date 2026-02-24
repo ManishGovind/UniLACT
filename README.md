@@ -49,7 +49,7 @@ UniLACT training consists of **three stages**:
 2. **Stage 2:** Unified latent pretraining 
 3. **Stage 3:** Action fine-tuning
 
-> Training is driven by YAML configs under `unilact/configs/train/` (and UniLARN configs under `unilarn/`).
+> Training is driven by YAML configs under `unilact/configs/train/` and configs under `unilarn/configs/train`.
 
 ---
 
@@ -58,17 +58,19 @@ UniLACT training consists of **three stages**:
 ```bash
 # (Update this command to your UniLARN entrypoint/config if different)
 cd ${PROJECT_UNILACT_ROOT}/unilarn
-python train_unilarn.py --config_path "${PROJECT_UNILACT_ROOT}/unilarn/configs/train/train_unilarn_on_calvin.yaml"
+accelerate launch --main_process_port <master_port> train_unilarn.py --config_path "${PROJECT_UNILACT_ROOT}/unilarn/configs/train/train_unilarn_on_calvin.yaml"
 ```
 
 ---
 
 ### Stage 2 — Unified latent Pretraining 
 
+
+
 ```bash
 # (Update this command to your pretraining config if different)
 cd ${PROJECT_UNILACT_ROOT}/unilact/train
-python train_unilact.py --config_path "${PROJECT_UNILACT_ROOT}/unilact/configs/train/pretrain_unilact_on_calvin.yaml"
+accelerate launch --main_process_port <master_port>  train_unilact.py --config_path "${PROJECT_UNILACT_ROOT}/unilact/configs/train/pretrain_unilact_on_calvin.yaml"
 ```
 
 ---
@@ -77,10 +79,10 @@ python train_unilact.py --config_path "${PROJECT_UNILACT_ROOT}/unilact/configs/t
 
 ```bash
 cd ${PROJECT_UNILACT_ROOT}/unilact/train
-python train_unilact.py   --config_path "${PROJECT_UNILACT_ROOT}/unilact/configs/train/finetune_unilact_on_calvin.yaml"
+accelerate launch --main_process_port <master_port> train_unilact.py   --config_path "${PROJECT_UNILACT_ROOT}/unilact/configs/train/finetune_unilact_on_calvin.yaml"
 ```
 
-
+---
 
 ### Evaluation on CALVIN (ABC→D) Benchmark
 
@@ -93,7 +95,7 @@ cd ${PROJECT_UNILACT_ROOT}/scripts
 bash evaluate_unilact_on_calvin.sh
 ```
 
-
+---
 
 ## ⏳ To-Do
 - [ ] Support for OXE-pretraining 
