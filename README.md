@@ -1,7 +1,7 @@
 <div align="center">
 
 <h2>
-  <a href="https://manishgovind.github.io/uniact-vla/" style="color:#9C276A; text-decoration:none;">
+  <a href="https://manishgovind.github.io/unilact-vla/" style="color:#9C276A; text-decoration:none;">
     UniLACT: Depth-Aware RGB Latent Action Learning for Vision-Language-Action Models
   </a>
 </h2>
@@ -10,7 +10,7 @@
   <a href="https://arxiv.org/abs/2510.13808">
     <img src="https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat&logo=arxiv" />
   </a>
-  <a href="https://manishgovind.github.io/uniact-vla/">
+  <a href="https://manishgovind.github.io/unilact-vla/">
     <img src="https://img.shields.io/badge/Website-Project%20Page-2ea44f?style=flat" />
   </a>
 </p>
