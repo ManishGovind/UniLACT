@@ -1,0 +1,36 @@
+_target_: unilact.src.models.unilact.UniLACT
+model_lang: 
+  _target_: transformers.T5EncoderModel.from_pretrained
+  pretrained_model_name_or_path: "t5-base"
+model_vision: 
+  _target_: unilact.src.models.mae_model.MaeEncoder
+  use_obs_feature: true
+  pretrained_model_name_or_path: "facebook/vit-mae-large"
+model_causal_transformer:
+  _target_: unilact.src.models.trajectory_gpt2.GPT2Model
+  config: 
+    _target_: unilact.src.models.trajectory_gpt2.GPT2Config
+    vocab_size: 1
+    n_embd: 768
+    n_layer: 12
+    n_head: 12
+    activation_function: "relu"
+    dropout: 0.1
+    n_positions: 1024
+act_dim: 7
+hidden_size: 768
+sequence_length: 2
+chunk_size: 3
+per_latent_action_len: 8
+latent_action_codebook_size: 128
+latent_action_pred: false
+act_pred: true
+img_feat_dim: 1024
+patch_feat_dim: 1024
+lang_feat_dim: 768
+mask_latent_motion_probability: 0.5
+freeze_lang: true
+freeze_vision: true
+use_latent_motion_pos_embedding: true
+pred_tokens_modality: "unified"
+output_modality_tokens: "same-modal"

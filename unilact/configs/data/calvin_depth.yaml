@@ -1,0 +1,4 @@
+data_type: "calvin_depth"
+lmdb_dir: "/data/vidlab_datasets/robotics/calvin_dataset/lmdb_datasets-new"
+rgb_shape: [200, 200]
+skip_frame: 5

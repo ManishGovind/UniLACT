@@ -1,0 +1,7 @@
+data_type: "calvin_mix"
+latent_modalities: ['calvin', 'calvin_depth' ,'calvin_unified']
+lmdb_dir: "/data/vidlab_datasets/robotics/calvin_dataset/lmdb_datasets-new"
+rgb_shape: [200, 200]
+skip_frame: 5
+no_repeat_data: true
+modalities: ['rgb','depth']

@@ -1,0 +1,5 @@
+data_type: "video_npz"
+npz_dir: "/data/vidlab_datasets/robotics/calvin_dataset/task_ABC_D" 
+rgb_shape: [200, 200]
+skip_frame: 5
+modalities: ['rgb','depth']

@@ -1,0 +1,5 @@
+data_type: "calvin_unified"
+lmdb_dir: "/data/vidlab_datasets/robotics/calvin_dataset/lmdb_datasets_rgb_depth_motion"
+rgb_shape: [200, 200]
+skip_frame: 5
+modalities: ['rgb','depth']

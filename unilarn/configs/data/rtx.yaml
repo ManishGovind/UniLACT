@@ -1,0 +1,59 @@
+data_type: "mix"
+video_dir: "/data/vidlab_datasets/robotics/video_datasets/"
+depth_video_dir: "/data/vidlab_datasets/robotics/depth_video_datasets/"
+rgb_shape: [224, 224]
+skip_frame: 3
+weighted: true
+modalities: ['rgb','depth']
+sub_data_configs: [
+  {
+    data_type: "video_json",
+    data_name: "fractal20220817_data",
+    weight: 150
+  },
+  {
+    data_type: "video_json",
+    data_name: "bridge",
+    weight: 50
+  },
+  {
+    data_type: "video_json",
+    data_name: "taco_play",
+    weight: 5
+  },
+  {
+    data_type: "video_json",
+    data_name: "jaco_play",
+    weight: 20
+  },
+  {
+    data_type: "video_json",
+    data_name: "berkeley_cable_routing",
+    weight: 20
+  },
+  {
+    data_type: "video_json",
+    data_name: "roboturk",
+    weight: 10
+  },
+  {
+    data_type: "video_json",
+    data_name: "nyu_door_opening_surprising_effectiveness",
+    weight: 5
+  },
+  {
+    data_type: "video_json",
+    data_name: "viola",
+    weight: 3
+  },
+  {
+    data_type: "video_json",
+    data_name: "berkeley_autolab_ur5",
+    weight: 5
+  },
+  {
+    data_type: "video_json",
+    data_name: "toto",
+    weight: 5
+  }
+]

@@ -1,0 +1,20 @@
+data_type: "mix"
+lmdb_dir: "/data/vidlab_datasets/robotics/lmdb_datasets/" 
+video_dir: "/data/vidlab_datasets/robotics/video_datasets/"
+depth_video_dir: "/data/vidlab_datasets/robotics/depth_video_datasets/"
+rgb_shape: [256, 256]
+skip_frame: 5
+weighted: false
+modality_types: ['rgb','depth']
+sub_data_configs: [
+  {
+    data_type: "realworld",
+    data_name: "real_world_task2_stackcube_30samples",
+    weight: 5
+  },
+  {
+    data_type: "realworld",
+    data_name: "real_world_task1_carrot_objectbowl",
+    weight: 5
+  }
+]

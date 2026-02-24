@@ -1,0 +1,15 @@
+# outputs / runs
+**/outputs/
+**/wandb/
+**/logs/
+
+# python cache
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# env / misc
+.venv/
+venv/
+.env
+.DS_Store
