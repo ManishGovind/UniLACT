@@ -107,4 +107,4 @@ bash evaluate_unilact_on_calvin.sh
 
 ## 🙏 Acknowledgements
 
-This project builds on top of [Moto](https://github.com/TencentARC/Moto), [CALVIN](https://github.com/mees/calvin). We thank the authors and maintainers for releasing their code and datasets to the community.
+This project builds on top of [Moto](https://github.com/TencentARC/Moto), [CALVIN](https://github.com/mees/calvin). We thank the authors for their open-sourced work.
