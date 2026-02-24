@@ -2,7 +2,7 @@
 
 <h2>
   <a href="" style="color:#9C276A; text-decoration:none;">
-    UniLACT: Depth-Aware RGB Latent Action Learning for Vision-Language-Action Models
+  UniLACT: Depth-Aware RGB Latent Action Learning for Vision-Language-Action Models
   </a>
 </h2>
 
