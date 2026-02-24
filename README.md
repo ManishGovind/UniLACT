@@ -98,6 +98,7 @@ bash evaluate_unilact_on_calvin.sh
 ---
 
 ## ⏳ To-Do
+- [ ] Training Data preparation
 - [ ] Support for OXE-pretraining 
 - [ ] Release pretrained and finetuned model checkpoints
 
