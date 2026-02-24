@@ -39,8 +39,8 @@ export PROJECT_UNILACT_ROOT=/path/to/UniLACT
 UniLACT training consists of **three stages**:
 
 1. **Stage 1:** Unified latent action learning (**UniLARN**)
-2. **Stage 2:** Unified latent pretraining (**UniLACT pretrain**)
-3. **Stage 3:** Action fine-tuning on downstream tasks (**CALVIN**)
+2. **Stage 2:** Unified latent pretraining 
+3. **Stage 3:** Action fine-tuning
 
 > Training is driven by YAML configs under `unilact/configs/train/` (and UniLARN configs under `unilarn/`).
 
