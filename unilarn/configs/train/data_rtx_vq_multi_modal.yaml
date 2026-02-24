@@ -1,5 +1,5 @@
-unilarn_config_path: "/data/mgovind/UniLACT/unilarn/configs/models/vq_size128_dim32_multi_modal.yaml"
-dataset_config_path: "/data/mgovind/UniLACT/unilarn/configs/data/rtx.yaml"
+unilarn_config_path: "/path/to/UniLACT/unilarn/configs/models/vq_size128_dim32_multi_modal.yaml"
+dataset_config_path: "/path/to/UniLACT/unilarn/configs/data/rtx.yaml"
 dataloader_config:
   bs_per_gpu: 64
   workers_per_gpu: 7
@@ -18,5 +18,5 @@ training_config:
   gradient_accumulation_steps: 1
   save_epochs: 1
   save_steps: 1000
-  save_path: "/data/mgovind/UniLACT/unilarn/outputs/unilarn_trained_on_rtx/"
+  save_path: "/path/to/UniLACT/unilarn/outputs/unilarn_trained_on_rtx/"
   resume_ckpt_path: null

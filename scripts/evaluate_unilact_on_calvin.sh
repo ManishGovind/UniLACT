@@ -16,7 +16,7 @@ echo "Done! EvalCALVIN ${EVAL_DIR}"
 
 MLMP=0.0
 TEST_CHUNK_SIZE=8
-UniLACT_PATH="${PROJECT_UniLACT_ROOT}/UniLACT/outputs_refresh/UniLACT_finetuned_on_calvin"
+UniLACT_PATH="${PROJECT_UniLACT_ROOT}/UniLACT/outputs/UniLACT_finetuned_on_calvin" # provide the path to pytorch.bin file
 EVAL_DIR="${PROJECT_UniLACT_ROOT}/UniLACT/evaluation/robot_manipulation_benchmarks/calvin/eval_results"
 EvalCALVIN
 

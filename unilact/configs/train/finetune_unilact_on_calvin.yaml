@@ -1,6 +1,6 @@
-unilact_config_path: "/data/mgovind/UniLACT/unilact/configs/models/actPredTrue_motionPredTrue_visionMaeLarge_seq2_chunk5_maskProb0.5_usePos_multi_modal.yaml"
-unilarn_path: "/data/mgovind/UniLACT/unilarn/outputs/unilarn_trained_on_calvin/temp_epoch_0_step_0"
-dataset_config_path: "/data/mgovind/UniLACT/unilact/configs/data/calvin_unified.yaml"
+unilact_config_path: "/path/to/UniLACT/unilact/configs/models/actPredTrue_motionPredTrue_visionMaeLarge_seq2_chunk5_maskProb0.5_usePos_multi_modal.yaml"
+unilarn_path: "/path/to/UniLACT/unilarn/outputs/unilarn_trained_on_calvin/"
+dataset_config_path: "/path/to/UniLACT/unilact/configs/data/calvin_unified.yaml"
 dataloader_config:
   bs_per_gpu: 32
   workers_per_gpu: 7
@@ -19,7 +19,7 @@ training_config:
   gradient_accumulation_steps: 4
   save_epochs: 1
   save_steps: 10000
-  save_path: "/data/mgovind/UniLACT/unilact/outputs/unilact_finetuned_on_calvin"
+  save_path: "/path/to/UniLACT/unilact/outputs/unilact_finetuned_on_calvin"
   resume_ckpt_path: null
   max_epoch: 12
   pred_binary_gripper_action: true

@@ -81,8 +81,22 @@ python train_unilact.py   --config_path "${PROJECT_UNILACT_ROOT}/unilact/configs
 ```
 
 
+
+### Evaluation on CALVIN (ABC→D) Benchmark
+
+Install the CALVIN benchmark in the same conda environment (`unilact`) by following the official [CALVIN](https://github.com/mees/calvin) repository instructions.
+
+```bash
+conda activate unilact
+export PROJECT_UNILACT_ROOT=/path/to/UniLACT
+cd ${PROJECT_UNILACT_ROOT}/scripts
+bash evaluate_unilact_on_calvin.sh
+```
+
+
+
 ## ⏳ To-Do
-- [ ] CALVIN benchmark evaluation 
+- [ ] Support for OXE-pretraining 
 - [ ] Release pretrained and finetuned model checkpoints
 
 
