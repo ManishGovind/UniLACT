@@ -7,7 +7,7 @@
 </h2>
 
 <p>
-  <a href="https://arxiv.org/abs/2510.13808">
+  <a href="https://arxiv.org/abs/2602.20231">
     <img src="https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat&logo=arxiv" />
   </a>
   <a href="https://manishgovind.github.io/unilact-vla/">
