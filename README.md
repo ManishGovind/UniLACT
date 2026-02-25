@@ -107,4 +107,19 @@ bash evaluate_unilact_on_calvin.sh
 
 ## 🙏 Acknowledgements
 
-This project builds on top of [Moto](https://github.com/TencentARC/Moto), [CALVIN](https://github.com/mees/calvin). We thank the authors for their open-sourced work.
+This project builds on top of [Moto](https://github.com/TencentARC/Moto), [CALVIN](https://github.com/mees/calvin). We thank the authors for the ir open-sourced work.
+
+## 📝 Citation
+
+If you find our work useful, please cite:
+
+```bibtex
+@article{govind2026unilactdepthawarergblatent,
+  title= {UniLACT: Depth-Aware RGB Latent Action Learning for Vision-Language-Action Models},
+  author= {Manish Kumar Govind and Dominick Reilly and Pu Wang and Srijan Das},
+  journal={arXiv preprint arXiv:2602.20231},
+  year={2026}
+}
+
+
+
