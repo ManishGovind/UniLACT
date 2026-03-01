@@ -7,9 +7,6 @@
 </h2>
 
 <p>
-  <a href="https://arxiv.org/abs/2602.20231">
-    <img src="https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat&logo=arxiv" />
-  </a>
   <a href="https://manishgovind.github.io/unilact-vla/">
     <img src="https://img.shields.io/badge/Website-Project%20Page-2ea44f?style=flat" />
   </a>
@@ -109,7 +106,7 @@ bash evaluate_unilact_on_calvin.sh
 
 This project builds on top of [Moto](https://github.com/TencentARC/Moto), [CALVIN](https://github.com/mees/calvin). We thank the authors for their open-sourced work.
 
-## 📝 Citation
+<!-- ## 📝 Citation
 
 If you find our work useful, please cite:
 
@@ -119,7 +116,7 @@ If you find our work useful, please cite:
   author= {Manish Kumar Govind and Dominick Reilly and Pu Wang and Srijan Das},
   journal={arXiv preprint arXiv:2602.20231},
   year={2026}
-}
+} -->
 
 
 
