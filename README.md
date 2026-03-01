@@ -1,13 +1,13 @@
 <div align="center">
 
 <h2>
-  <a href="https://manishgovind.github.io/unilact-vla/" style="color:#9C276A; text-decoration:none;">
+  <a href="https://gmaov7-eng.github.io/unilact-vla/" style="color:#9C276A; text-decoration:none;">
     UniLACT: Depth-Aware RGB Latent Action Learning for Vision-Language-Action Models
   </a>
 </h2>
 
 <p>
-  <a href="https://manishgovind.github.io/unilact-vla/">
+  <a href="https://gmaov7-eng.github.io/unilact-vla/">
     <img src="https://img.shields.io/badge/Website-Project%20Page-2ea44f?style=flat" />
   </a>
 </p>
@@ -25,7 +25,7 @@ conda activate unilact
 ### 2) Clone the repo and install dependencies
 
 ```bash
-git clone https://github.com/manishgovind/uniact-vla.git
+git clone <UniLACT repo>
 cd UniLACT
 pip install -r requirements.txt
 ```
