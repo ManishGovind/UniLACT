@@ -13,6 +13,9 @@
   <a href="https://manishgovind.github.io/unilact-vla/">
     <img src="https://img.shields.io/badge/Website-Project%20Page-2ea44f?style=flat" />
   </a>
+  <a href="https://huggingface.co/mgovind7/UniLACT">
+    <img src="https://img.shields.io/badge/Models-Hugging%20Face-ffd21e?style=flat&logo=huggingface" />
+  </a>
 </p>
 
 </div>
@@ -38,6 +41,43 @@ pip install -r requirements.txt
 ```bash
 export PROJECT_UNILACT_ROOT=/path/to/UniLACT
 ```
+
+---
+
+## 🤗 Pretrained Models
+
+Pretrained and finetuned checkpoints are hosted on Hugging Face: [mgovind7/UniLACT](https://huggingface.co/mgovind7/UniLACT).
+
+Each checkpoint directory contains `config.yaml` and `pytorch_model.bin`.
+
+| Stage | Model | Hugging Face path |
+| --- | --- | --- |
+| 1 — UniLARN | CALVIN | [`unilarn_trained_on_calvin`](https://huggingface.co/mgovind7/UniLACT/tree/main/unilarn_trained_on_calvin) |
+| 1 — UniLARN | OXE | [`unilarn_trained_on_oxe`](https://huggingface.co/mgovind7/UniLACT/tree/main/unilarn_trained_on_oxe) |
+| 2 — Latent pretraining | CALVIN | [`unilact_pretrained_on_calvin`](https://huggingface.co/mgovind7/UniLACT/tree/main/unilact_pretrained_on_calvin) |
+| 2 — Latent pretraining | OXE | [`unilact_pretrained_on_oxe`](https://huggingface.co/mgovind7/UniLACT/tree/main/unilact_pretrained_on_oxe) |
+| 3 — Fine-tuning | CALVIN (in-domain) | [`unilact_finetuned_on_calvin`](https://huggingface.co/mgovind7/UniLACT/tree/main/unilact_finetuned_on_calvin) |
+| 3 — Fine-tuning | CALVIN (from OXE pretrain) | [`unilact_finetuned_on_calvin_from_pretrained_oxe`](https://huggingface.co/mgovind7/UniLACT/tree/main/unilact_finetuned_on_calvin_from_pretrained_oxe) |
+
+### Download all checkpoints
+
+```bash
+pip install -U "huggingface_hub[cli]"
+export PROJECT_UNILACT_ROOT=/path/to/UniLACT
+
+hf download mgovind7/UniLACT --local-dir ${PROJECT_UNILACT_ROOT}/checkpoints
+```
+
+### Download a single checkpoint
+
+```bash
+# Stage 3 fine-tuned model used for CALVIN evaluation
+hf download mgovind7/UniLACT \
+  --local-dir ${PROJECT_UNILACT_ROOT}/checkpoints \
+  --include "unilact_finetuned_on_calvin/*"
+```
+
+After downloading, point the training or evaluation configs at the local checkpoint directory. For example, set `unilarn_path` in `unilact/configs/train/pretrain_unilact_on_calvin.yaml` to `${PROJECT_UNILACT_ROOT}/checkpoints/unilarn_trained_on_calvin`, or set `UniLACT_PATH` in `scripts/evaluate_unilact_on_calvin.sh` to `${PROJECT_UNILACT_ROOT}/checkpoints/unilact_finetuned_on_calvin`.
 
 ---
 
@@ -99,8 +139,8 @@ bash evaluate_unilact_on_calvin.sh
 
 ## ⏳ To-Do
 - [ ] Training Data preparation
-- [ ] Support for OXE-pretraining 
-- [ ] Release pretrained and finetuned model checkpoints
+- [ ] Support for OXE-pretraining
+- [x] Release pretrained and finetuned model checkpoints
 
 
 
