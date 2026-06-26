@@ -44,20 +44,18 @@ export PROJECT_UNILACT_ROOT=/path/to/UniLACT
 
 ---
 
-## 🤗 Pretrained Models
+## 🤗 Model Zoo
 
-Pretrained and finetuned checkpoints are hosted on Hugging Face: [mgovind7/UniLACT](https://huggingface.co/mgovind7/UniLACT).
+Pretrained and finetuned checkpoints are hosted on Hugging Face: [mgovind7/UniLACT](https://huggingface.co/mgovind7/UniLACT). Each checkpoint directory contains `config.yaml` and `pytorch_model.bin`.
 
-Each checkpoint directory contains `config.yaml` and `pytorch_model.bin`.
-
-| Stage | Model | Hugging Face path |
+| Model Name | HF Path | Note |
 | --- | --- | --- |
-| 1 — UniLARN | CALVIN | [`unilarn_trained_on_calvin`](https://huggingface.co/mgovind7/UniLACT/tree/main/unilarn_trained_on_calvin) |
-| 1 — UniLARN | OXE | [`unilarn_trained_on_oxe`](https://huggingface.co/mgovind7/UniLACT/tree/main/unilarn_trained_on_oxe) |
-| 2 — Latent pretraining | CALVIN | [`unilact_pretrained_on_calvin`](https://huggingface.co/mgovind7/UniLACT/tree/main/unilact_pretrained_on_calvin) |
-| 2 — Latent pretraining | OXE | [`unilact_pretrained_on_oxe`](https://huggingface.co/mgovind7/UniLACT/tree/main/unilact_pretrained_on_oxe) |
-| 3 — Fine-tuning | CALVIN (in-domain) | [`unilact_finetuned_on_calvin`](https://huggingface.co/mgovind7/UniLACT/tree/main/unilact_finetuned_on_calvin) |
-| 3 — Fine-tuning | CALVIN (from OXE pretrain) | [`unilact_finetuned_on_calvin_from_pretrained_oxe`](https://huggingface.co/mgovind7/UniLACT/tree/main/unilact_finetuned_on_calvin_from_pretrained_oxe) |
+| `unilarn-calvin` | [`unilarn_trained_on_calvin`](https://huggingface.co/mgovind7/UniLACT/tree/main/unilarn_trained_on_calvin) | Stage-1 UniLARN trained on CALVIN RGB-D. |
+| `unilarn-oxe` | [`unilarn_trained_on_oxe`](https://huggingface.co/mgovind7/UniLACT/tree/main/unilarn_trained_on_oxe) | Stage-1 UniLARN trained on Open X-Embodiment. |
+| `unilact-pretrain-calvin` | [`unilact_pretrained_on_calvin`](https://huggingface.co/mgovind7/UniLACT/tree/main/unilact_pretrained_on_calvin) | Stage-2 depth-aware latent pretraining on CALVIN. |
+| `unilact-pretrain-oxe` | [`unilact_pretrained_on_oxe`](https://huggingface.co/mgovind7/UniLACT/tree/main/unilact_pretrained_on_oxe) | Stage-2 depth-aware latent pretraining on OXE. |
+| `unilact-calvin` | [`unilact_finetuned_on_calvin`](https://huggingface.co/mgovind7/UniLACT/tree/main/unilact_finetuned_on_calvin) | Fine-tuned on CALVIN for ABC→D evaluation (in-domain pretraining). |
+| `unilact-calvin-ood` | [`unilact_finetuned_on_calvin_from_pretrained_oxe`](https://huggingface.co/mgovind7/UniLACT/tree/main/unilact_finetuned_on_calvin_from_pretrained_oxe) | Fine-tuned on CALVIN after out-of-domain OXE pretraining. |
 
 ### Download all checkpoints
 
