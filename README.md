@@ -46,7 +46,7 @@ export PROJECT_UNILACT_ROOT=/path/to/UniLACT
 
 ## 🤗 Model Zoo
 
-Pretrained and finetuned checkpoints are hosted on Hugging Face: [mgovind7/UniLACT](https://huggingface.co/mgovind7/UniLACT). Each checkpoint directory contains `config.yaml` and `pytorch_model.bin`.
+Pretrained and finetuned checkpoints are hosted on Hugging Face : [UniLACT-models](https://huggingface.co/mgovind7/UniLACT). Each checkpoint directory contains `config.yaml` and `pytorch_model.bin`.
 
 | Model Name | HF Path | Note |
 | --- | --- | --- |
